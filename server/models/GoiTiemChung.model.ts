@@ -3,24 +3,24 @@ import { ObjectId } from 'mongoose'
 import Vaccine from './Vaccine.model';
 
 interface GoiTiemChung {
-    MaGoi: string,
+    MaGoiTiemChung: string,
     TenGoi: string,
     SoLuong: number,
     Gia: number,
     TinhTrang: string,
-    Vaccines: Array<Vaccine>,
+    DSVaccine: Array<Vaccine>,
 }
 
-const GoiTiemChungSchema = new Schema<GoiTiemChung>(
+const DSGoiTiemChungSchema = new Schema<GoiTiemChung>(
 {
-        MaGoi: String,
+        MaGoiTiemChung: String,
         TenGoi: String,
         SoLuong: Number,
         Gia: Number,
         TinhTrang: String,
-        Vaccines: [
+        DSVaccine: [
             {
-                _id: {
+                MaVaccine: {
                     type: Schema.Types.ObjectId,
                     ref: 'Vaccine',
                 },
@@ -29,5 +29,5 @@ const GoiTiemChungSchema = new Schema<GoiTiemChung>(
     }
 )
 
-const GoiTiemChung = model<GoiTiemChung>('GoiTiemChung', GoiTiemChungSchema)
+const GoiTiemChung = model<GoiTiemChung>('GoiTiemChung', DSGoiTiemChungSchema)
 export default GoiTiemChung

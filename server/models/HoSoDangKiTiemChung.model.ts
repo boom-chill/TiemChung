@@ -7,22 +7,20 @@ interface HoSoDangKiTiemChung {
     MaKH: ObjectId,
     NgayLap: Date,
     TongTien: number,
-    Vaccines: Array<Vaccine>,
-    GoiTiemChungs: Array<GoiTiemChung>
+    DSVaccine: Array<Vaccine>,
+    DSGoiTiemChung: Array<GoiTiemChung>
 }
 
 const HoSoDangKiTiemChungSchema = new Schema<HoSoDangKiTiemChung>(
     {
         MaHoSoDangKiTiemChung: String,
         MaKH:   {
-         
-                type: Schema.Types.ObjectId,
-                ref: 'KhachHang',
-            
+            type: Schema.Types.ObjectId,
+            ref: 'KhachHang',
         },
-        Vaccines: [
+        DSVaccine: [
             {
-                _id: {
+                MaVaccine: {
                     type: Schema.Types.ObjectId,
                     ref: 'Vaccine',
                 },
@@ -32,13 +30,13 @@ const HoSoDangKiTiemChungSchema = new Schema<HoSoDangKiTiemChung>(
 
             }
         ],
-        GoiTiemChungs: [
+        DSGoiTiemChung: [
             {
-                _id: {
+                MaGoiTiemChung: {
                     type: Schema.Types.ObjectId,
                     ref: 'GoiTiemChung',
                 },
-                 SoLuong: Number,
+                SoLuong: Number,
                 TrangThai: String,
                 NgayHenTiem: Date,
             }

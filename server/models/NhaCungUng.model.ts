@@ -4,12 +4,14 @@ import Vaccine from './Vaccine.model';
 interface NhaCungUng {
     MaNCU: string,
     TenNCU: string,
+    SDT: string,
 }
 
 const NhaCungUngSchema = new Schema<NhaCungUng>(
     {
         MaNCU: String,
         TenNCU: String,
+        SDT: String,
     }
 )
 

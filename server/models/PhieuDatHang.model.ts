@@ -6,7 +6,8 @@ interface PhieuDatHang {
     LanTra: string,
     NgayLap: Date,
     TongTien: number,
-    Vaccines: Array<Vaccine>,
+    TrangThai: string,
+    DSVaccine: Array<Vaccine>,
 }
 
 const PhieuDatHangSchema = new Schema<PhieuDatHang>(
@@ -14,9 +15,10 @@ const PhieuDatHangSchema = new Schema<PhieuDatHang>(
         MaPhieu: String,
         NgayLap: Date,
         TongTien: Number,
-        Vaccines: [
+        TrangThai: String,
+        DSVaccine: [
             {
-                _id: {
+                MaVaccine: {
                     type: Schema.Types.ObjectId,
                     ref: 'Vaccine',
                 },

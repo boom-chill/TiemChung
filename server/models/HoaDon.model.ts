@@ -11,8 +11,8 @@ interface HoaDon {
     TongTien: number,
     TrangThai: string,
     MaKH: ObjectId,
-    GoiTiemChungs: Array<GoiTiemChung>,
-    Vaccines: Array<Vaccine>,
+    DSGoiTiemChung: Array<GoiTiemChung>,
+    DSVaccine: Array<Vaccine>,
 }
 
 const HoaDonSchema = new Schema<HoaDon>(
@@ -26,18 +26,18 @@ const HoaDonSchema = new Schema<HoaDon>(
             type: Schema.Types.ObjectId,
             ref: 'KhachHang'
         },
-        Vaccines: [
+        DSVaccine: [
             {
-                _id: {
+                MaVaccine: {
                     type: Schema.Types.ObjectId,
                     ref: 'Vaccine',
                 },
                 SoLuong: Number,
             }
         ],
-        GoiTiemChungs: [
+        DSGoiTiemChung: [
             {
-                _id: {
+                MaGoiTiemChung: {
                     type: Schema.Types.ObjectId,
                     ref: 'GoiTiemChung',
                 },
