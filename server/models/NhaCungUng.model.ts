@@ -15,5 +15,5 @@ const NhaCungUngSchema = new Schema<NhaCungUng>(
     }
 )
 
-const NhaCungUng = model<NhaCungUng>('HoaDon', NhaCungUngSchema)
+const NhaCungUng = model<NhaCungUng>('NhaCungUng', NhaCungUngSchema)
 export default NhaCungUng

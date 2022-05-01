@@ -46,5 +46,5 @@ const HoSoDangKiTiemChungSchema = new Schema<HoSoDangKiTiemChung>(
     }
 )
 
-const HoSoDangKiTiemChung = model<HoSoDangKiTiemChung>('HoaDon', HoSoDangKiTiemChungSchema)
+const HoSoDangKiTiemChung = model<HoSoDangKiTiemChung>('HoSoDangKiTiemChung', HoSoDangKiTiemChungSchema)
 export default HoSoDangKiTiemChung

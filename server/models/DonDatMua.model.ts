@@ -1,7 +1,7 @@
 import { Schema, model, connect } from 'mongoose';
 import Vaccine from './Vaccine.model';
 
-interface PhieuDatHang {
+interface DonDatMua {
     MaPhieu: string,
     LanTra: string,
     NgayLap: Date,
@@ -10,7 +10,7 @@ interface PhieuDatHang {
     DSVaccine: Array<Vaccine>,
 }
 
-const PhieuDatHangSchema = new Schema<PhieuDatHang>(
+const DonDatMuaSchema = new Schema<DonDatMua>(
     {
         MaPhieu: String,
         NgayLap: Date,
@@ -28,5 +28,5 @@ const PhieuDatHangSchema = new Schema<PhieuDatHang>(
     }
 )
 
-const PhieuDatHang = model<PhieuDatHang>('HoaDon', PhieuDatHangSchema)
-export default PhieuDatHang
+const DonDatMua = model<DonDatMua>('DonDatMua', DonDatMuaSchema)
+export default DonDatMua
