@@ -2,12 +2,9 @@ import express, { Express, Request, Response } from 'express';
 import mongoose, { Schema, model, connect } from 'mongoose';
 import { json } from 'body-parser'
 import dotenv from 'dotenv'
-import KhachHang from './models/KhachHang.model';
 import cors from 'cors'
 import Vaccine from './models/Vaccine.model';
-import GoiTiemChung from './models/GoiTiemChung.model';
-import HoSoDangKiTiemChung from './models/HoSoDangKiTiemChung.model';
-import { dangKiTiemChungVaccine, DSKhachHang, hoSoKhachHang, khachHang, dangKiTiemChungGoi } from './controller/khachhang';
+import { dangKiTiemChungVaccine, DSKhachHang, hoSoKhachHang, khachHang, dangKiTiemChungGoi } from './controller/khachHang';
 import { goiTiemChung, vaccine } from './controller/vaccine';
 const router = express.Router()
 

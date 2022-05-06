@@ -1,11 +1,10 @@
 import GoiTiemChung from '../models/GoiTiemChung.model';
-import HoSoDangKiTiemChung from '../models/HoSoDangKiTiemChung.model';
-import KhachHang from '../models/KhachHang.model';
+import { KhachHang, HoSoDangKiTiemChung } from '../models/KhachHang.model';
 import Vaccine from '../models/Vaccine.model';
 
 export const DSKhachHang = async (req: any, res: any) => {
     try {
-        const DSKhachHang: Array<KhachHang> = await KhachHang.find()
+        const DSKhachHang: Array<any> = await KhachHang.find()
         res.send(DSKhachHang)
     } catch (error) {
         console.log(error)
@@ -16,7 +15,7 @@ export const khachHang = async (req: any, res: any) => {
     const id: string = req.params.id
     console.log(id)
     try {
-        const khachHang: KhachHang | null = await KhachHang.findOne({MaKH: id})
+        const khachHang: any = await KhachHang.findOne({MaKH: id})
         res.send(khachHang)
     } catch (error) {
         console.log(error)
@@ -26,7 +25,7 @@ export const khachHang = async (req: any, res: any) => {
 export const hoSoKhachHang = async (req: any, res: any) => {
     const MaKH: string = req.params.id
     try {
-        const hoSoDangKiTiemChung: HoSoDangKiTiemChung | null = await HoSoDangKiTiemChung.findOne({MaKH: MaKH}).lean()
+        const hoSoDangKiTiemChung: any = await HoSoDangKiTiemChung.findOne({MaKH: MaKH}).lean()
         
         const DSVaccine = hoSoDangKiTiemChung?.DSVaccine
         const DSGoiTiemChung = hoSoDangKiTiemChung?.DSGoiTiemChung

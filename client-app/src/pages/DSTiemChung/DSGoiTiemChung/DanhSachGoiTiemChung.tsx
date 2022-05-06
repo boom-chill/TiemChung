@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './ChonGoiTiemChung.scss'
-import Toolbar from '../../components/Toolbar/Toolbar';
-import ButtonCustom from '../../components/ButtonCustom/ButtonCustom';
+import Toolbar from '../../../components/Toolbar/Toolbar';
+import ButtonCustom from '../../../components/ButtonCustom/ButtonCustom';
 import axios from 'axios';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import ButtonSecond from '../../components/ButtonSecond/ButtonSecond';
+import ButtonSecond from '../../../components/ButtonSecond/ButtonSecond';
 
 type Props = {
 

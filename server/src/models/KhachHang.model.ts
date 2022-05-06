@@ -36,5 +36,44 @@ const KhachHangSchema = new Schema<KhachHang>(
     }
 )
 
-const KhachHang = model<KhachHang>('KhachHang', KhachHangSchema)
-export default KhachHang
+export const KhachHang = model<KhachHang>('KhachHang', KhachHangSchema)
+
+
+interface HoSoDangKiTiemChung {
+    MaHoSoDangKiTiemChung: string
+    MaKH: string,
+    NgayLap: Date,
+    TongTien: number,
+    DSVaccine: Array<any>,
+    DSGoiTiemChung: Array<any>,
+    Gia: number,
+}
+
+const HoSoDangKiTiemChungSchema = new Schema<HoSoDangKiTiemChung>(
+    {
+        MaHoSoDangKiTiemChung: String,
+        MaKH: String,
+        DSVaccine: [
+            {
+                MaVaccine: String,
+                SoLuong: Number,
+                TrangThai: String,
+                NgayHenTiem: Date,
+                Gia: Number,
+            }
+        ],
+        DSGoiTiemChung: [
+            {
+                MaGoiTiemChung: String,
+                SoLuong: Number,
+                TrangThai: String,
+                NgayHenTiem: Date,
+                Gia: Number,
+            }
+        ],
+        NgayLap: Date,
+        TongTien: Number,
+    }
+)
+
+export const HoSoDangKiTiemChung = model<HoSoDangKiTiemChung>('HoSoDangKiTiemChung', HoSoDangKiTiemChungSchema)

@@ -12,8 +12,8 @@ import Search from './components/Search/Search';
 import Table from './components/Table/Table';
 import Khachhang from './pages/KhachHang/KhachHang';
 import DSKhachHang from './pages/DSKhachHang/DSKhachHang';
-import ChonVaccine from './pages/ChonVaccine/DanhSachVaccine';
-import ChonGoiTiemChung from './pages/ChonGoiTiemChung/DanhSachTiemChung';
+import ChonVaccine from './pages/DSTiemChung/DSVaccine/DanhSachVaccine';
+import ChonGoiTiemChung from './pages/DSTiemChung/DSGoiTiemChung/DanhSachGoiTiemChung';
 
 function App() {
   return (
