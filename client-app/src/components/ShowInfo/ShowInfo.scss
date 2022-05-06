@@ -1,0 +1,16 @@
+.show_info_root {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    .show_info_label {
+        font-weight: 600;
+        color: #5D5570;
+        font-size: 30px;
+    }
+    .show_info_value {
+        font-weight: 600;
+        color: #7042DA;
+        font-size: 30px;
+    }
+}

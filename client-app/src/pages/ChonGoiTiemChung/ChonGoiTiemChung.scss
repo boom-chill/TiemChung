@@ -1,0 +1,97 @@
+.container {
+    max-width: 1600px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #F3F1FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .container_header {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .table_container {
+        width: 100%;
+        border-radius: 20px;
+
+        .second_toolbar {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: #725CCC;
+            height: 100px;
+            width: 100%;
+        }
+        
+        table {
+            overflow: hidden;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 100%;
+            border-collapse: collapse;
+            .table_header{
+                background-color: #DEC6F2;
+                color: #6E6097;
+                th {
+                    text-align: left;
+                    padding: 10px 20px; 
+                    font-size: 24px;
+                    border: none;
+                }
+            }
+            .table_value {
+                td {
+                    background-color: white;
+                    text-align: left;
+                    padding: 10px 20px;
+                    color: #4F4747;
+                    border-top: 1px solid #F6F3F9;
+                    border-bottom: 1px solid #F6F3F9;
+                    font-size: 24px;
+                }
+            }
+
+        }
+
+
+    }
+}
+
+.item-input {
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input{
+            height: 26px;
+            text-align:center;
+            width: 60px;
+            border-radius: 4px;
+            font-size: 20px;
+            margin: 0 0.2em;
+        }
+    }
+
+    button{
+        height: 30px;
+        width: 30px;
+        background-color: #4F2BDD;
+        color: white;
+        font-size: 20px;
+        border-radius: 4px;
+        transition: 0.2s;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color:  #d38888;
+            color: white;
+        }
+    }
+    
+}

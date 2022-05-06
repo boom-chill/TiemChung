@@ -1,0 +1,11 @@
+.Toolbar_root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .Toolbar_title {
+        color: #4E4270;
+        font-weight: bold;
+        font-size: 40px;
+    }
+}

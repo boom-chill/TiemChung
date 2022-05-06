@@ -1,0 +1,40 @@
+.page_khach_hang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1600px;
+    margin-bottom: 60px;
+    .page_khach_hang_title {
+        font-size: 40px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: #7042DA;
+    }
+    .page_khach_hang_info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .page_khach_hang_address {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+}
+
+.page_khach_hang_HSDKTC {
+    position: relative;
+    margin-bottom: 60px;
+    border-radius: 0;
+    .page_khach_hang_title {
+        font-size: 40px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: #7042DA;
+    }
+}

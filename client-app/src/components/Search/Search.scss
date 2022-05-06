@@ -1,0 +1,13 @@
+.search_root {
+    height: 60px;
+    padding: 0 30px;
+    color: white;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        opacity: 80%;
+    }
+    
+}
